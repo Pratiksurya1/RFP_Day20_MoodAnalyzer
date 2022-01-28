@@ -30,7 +30,16 @@ namespace MoodAnalyser
         {
             Type t=typeof(MoodAnalyser);
             ConstructorInfo[] constructorInfos=t.GetConstructors();
-            Assert.Equals(constructorInfos.Length, 2);
+            Assert.Equals(constructorInfos,t);
+        }
+
+
+        [TestMethod]
+        public void MoodAnalyserFactoryWithParameter()
+        {
+            Type t = typeof(MoodAnalyser);
+            ConstructorInfo[] constructorInfos = t.GetConstructors();
+            Equals(constructorInfos, t);
         }
     }
 }

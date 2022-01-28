@@ -10,10 +10,12 @@ namespace MoodAnalyser
     internal class MoodAnalyser
     {
         string message;
-        public MoodAnalyser()
-        {
+        //[MoodAnalyser]
+        //public MoodAnalyser()
+        //{
 
-        }
+        //}
+        [MoodAnalyser("Given info of user mood")]
         public MoodAnalyser(string message)
         {
             this.message = message; 
