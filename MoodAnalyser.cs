@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyser
 {
+    
     internal class MoodAnalyser
     {
         string message;
@@ -16,9 +17,12 @@ namespace MoodAnalyser
 
         public string AnalyzeMood()
         {
-            try
+            try 
             {
-                if (message.ToLower().Contains("happy"))
+                if (message.Equals(String.Empty))
+                    throw new NullMoodException(NullMoodException.UserException.NullMoodException, "Mood should not be empty");
+
+                else if (message.ToLower().Contains("happy"))
                     return "happy";
                 else
                     return "sad";
