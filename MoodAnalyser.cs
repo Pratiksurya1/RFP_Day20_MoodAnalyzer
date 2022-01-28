@@ -11,7 +11,7 @@ namespace MoodAnalyser
         string message;
         public MoodAnalyser(string message)
         {
-            this.message = message;
+            this.message = message; 
         }
 
         public string AnalyzeMood()

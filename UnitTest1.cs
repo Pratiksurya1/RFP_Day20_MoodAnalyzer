@@ -14,7 +14,7 @@ namespace MoodAnalyser
             moodAnalyser = new MoodAnalyser(message);
         }
         [TestMethod]
-        public void TestHappyMood()
+        public void TestHappyMood() 
         {
             string expected = "happy";
 
