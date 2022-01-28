@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Reflection;
 
 namespace MoodAnalyser
 {
@@ -22,6 +23,14 @@ namespace MoodAnalyser
             MoodAnalyser moodAnalyser = new MoodAnalyser("I am in sad Mood");
             string actual = moodAnalyser.AnalyzeMood();
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public static void MoodAnalyserFactory()
+        {
+            Type t=typeof(MoodAnalyser);
+            ConstructorInfo[] constructorInfos=t.GetConstructors();
+            Assert.Equals(constructorInfos.Length, 2);
         }
     }
 }
